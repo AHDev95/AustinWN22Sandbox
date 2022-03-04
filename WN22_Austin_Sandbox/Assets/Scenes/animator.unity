@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 1103919146}
   - component: {fileID: 1103919149}
   - component: {fileID: 1103919150}
+  - component: {fileID: 1103919151}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -253,6 +254,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animate: {fileID: 1908198765}
+  parameterName: toggle
+  hasTrigger: 0
+  hasFloat: 0
+  hasInt: 0
+  hasBool: 1
+--- !u!114 &1103919151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103919145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ab59943951be048a0833bb4afcd0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animate: {fileID: 1908198765}
+  parameterName: startTrigger
+  hasTrigger: 1
+  hasFloat: 0
+  hasInt: 0
+  hasBool: 0
 --- !u!1 &1333672903
 GameObject:
   m_ObjectHideFlags: 0
