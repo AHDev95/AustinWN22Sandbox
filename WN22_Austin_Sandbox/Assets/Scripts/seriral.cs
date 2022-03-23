@@ -13,9 +13,9 @@ public class seriral : MonoBehaviour
 
     private void Awake()
     {
-        intTosave = ui.intTosave;
-        floatTosave = ui.floattosave;
-        stringTosave = ui.stringTosave;
+       // intTosave = ui.intTosave;
+        //floatTosave = ui.floattosave;
+        //stringTosave = ui.stringTosave;
     }
 
     // Start is called before the first frame update

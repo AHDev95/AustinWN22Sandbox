@@ -26,8 +26,8 @@ public class UIData : MonoBehaviour
     public void changeSliderValue()
     {
         floatTosave = floatSlider.value;
-        intTosave = Mathf.RoundToInt(intSlider.value);
-        intText.text = intTosave.ToString();
+        //intTosave = Mathf.RoundToInt(intSlider.value);
+       // intText.text = intTosave.ToString();
         floatText.text = floatTosave.ToString();
     }
 
@@ -38,7 +38,7 @@ public class UIData : MonoBehaviour
 
     public void DisplayInfo()
     {
-        intText.text = intTosave.ToString();
+        //intText.text = intTosave.ToString();
     }
 
 
