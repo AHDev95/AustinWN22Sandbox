@@ -14,7 +14,10 @@ public class savePrefs : MonoBehaviour
     float floatToSave;
     string stringToSave = "";
 
-
+    private void Awake()
+    {
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
