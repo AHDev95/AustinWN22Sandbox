@@ -10,54 +10,70 @@ public class savePrefs : MonoBehaviour
       https://gamedevbeginner.com/how-to-use-player-prefs-in-unity/
       */
 
-    int intToSave;
-    float floatToSave;
-    string stringToSave = "";
+      public UIData ui;
+
+   //int intToSave;
+   //float floatToSave;
+   //string stringToSave;
 
     private void Awake()
     {
+        ui = GetComponent<UIData>();
         
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    void SaveGame()
+    public void SaveGame()
     {
-        PlayerPrefs.SetInt("SavedInteger", intToSave);
-        PlayerPrefs.SetFloat("SavedFloat", floatToSave);
-        PlayerPrefs.SetString("SavedString", stringToSave);
+
+        //intToSave = Mathf.RoundToInt(ui.intSlider.value);
+      // floatToSave = ui.floatSlider.value;
+        //stringToSave = ui.Name.text;
+
+        PlayerPrefs.SetInt("SavedInteger", ui.intToSave);
+        PlayerPrefs.SetFloat("SavedFloat", ui.floatToSave);
+        PlayerPrefs.SetString("SavedString", ui.stringToSave);
         PlayerPrefs.Save();
+
+        ui.dataText.text = "Your number is " + ui.intToSave.ToString();
+
         Debug.Log("Game data saved!");
     }
 
-    void LoadGame()
+    public void LoadGame()
     {
         if (PlayerPrefs.HasKey("SavedInteger"))
         {
-            intToSave = PlayerPrefs.GetInt("SavedInteger");
-            floatToSave = PlayerPrefs.GetFloat("SavedFloat");
-            stringToSave = PlayerPrefs.GetString("SavedString");
+            ui.intToSave = PlayerPrefs.GetInt("SavedInteger");
+           ui.floatToSave = PlayerPrefs.GetFloat("SavedFloat");
+            ui.stringToSave = PlayerPrefs.GetString("SavedString");
+
+            ui.dataText.text = "Hello " + ui.stringToSave + ". Your integer was " + ui.intToSave.ToString() + " and your float was " + ui.floatToSave.ToString();
+
+            ui.intSlider.value = (float)ui.intToSave;
+
+           ui.floatSlider.value = ui.floatToSave;
+
             Debug.Log("Game data loaded!");
         }
         else
             Debug.LogError("There is no save data!");
     }
 
-    void ResetData()
+    public void ResetData()
     {
         PlayerPrefs.DeleteAll();
-        intToSave = 0;
-        floatToSave = 0.0f;
-        stringToSave = "";
+        ui.intToSave = 0;
+        ui.floatToSave = 0.0f;
+        ui.stringToSave = "";
+
+        ui.dataText.text = "Your number is " + ui.intToSave.ToString();
+
+        ui.intSlider.value = (float)ui.intToSave;
+
+        ui.floatSlider.value = ui.floatToSave;
+
         Debug.Log("Data reset complete");
     }
 }

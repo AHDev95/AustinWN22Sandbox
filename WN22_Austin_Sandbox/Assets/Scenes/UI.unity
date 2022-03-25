@@ -1663,7 +1663,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 204833571}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1350974378}
+        m_TargetAssemblyTypeName: savePrefs, Assembly-CSharp
+        m_MethodName: SaveGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &204833571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2537,7 +2549,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 355495968}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1350974378}
+        m_TargetAssemblyTypeName: savePrefs, Assembly-CSharp
+        m_MethodName: LoadGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &355495968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3413,7 +3437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Reset
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3503,7 +3527,7 @@ GameObject:
   - component: {fileID: 565509193}
   - component: {fileID: 565509192}
   m_Layer: 5
-  m_Name: Button quit
+  m_Name: Button Reset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3572,7 +3596,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 565509193}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1350974378}
+        m_TargetAssemblyTypeName: savePrefs, Assembly-CSharp
+        m_MethodName: ResetData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &565509193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3871,7 +3907,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1350974377}
+        m_TargetAssemblyTypeName: UIData, Assembly-CSharp
+        m_MethodName: ChangeSlider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &650340323
 GameObject:
   m_ObjectHideFlags: 0
@@ -5137,7 +5185,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0.05}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00020000336, y: 5.1053334e-10, z: -0.032799993}
+  m_ConnectedAnchor: {x: 0.00020000337, y: 5.1053334e-10, z: -0.032799993}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -6683,7 +6731,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6737,13 +6785,15 @@ GameObject:
   - component: {fileID: 1350974375}
   - component: {fileID: 1350974374}
   - component: {fileID: 1350974373}
+  - component: {fileID: 1350974377}
+  - component: {fileID: 1350974378}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1350974373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6825,6 +6875,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1350974377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350974372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40112282475ae134293cf5609e708406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intToSave: 0
+  floatToSave: 0
+  stringToSave: 
+  intSlider: {fileID: 648546895}
+  floatSlider: {fileID: 1410800270}
+  Name: {fileID: 1559650260}
+  floatText: {fileID: 661518991}
+  intText: {fileID: 421974026}
+  dataText: {fileID: 1444389699}
+--- !u!114 &1350974378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350974372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71aad438b6607a04fb82445340b1f848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui: {fileID: 1350974377}
 --- !u!1 &1366621780
 GameObject:
   m_ObjectHideFlags: 0
@@ -6858,7 +6942,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7327,7 +7411,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1350974377}
+        m_TargetAssemblyTypeName: UIData, Assembly-CSharp
+        m_MethodName: ChangeSlider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1411867611
 GameObject:
   m_ObjectHideFlags: 0
@@ -7361,7 +7457,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9104,7 +9200,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11754,7 +11850,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0.05}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0032033192, y: 0.0015807338, z: -0.03487979}
+  m_ConnectedAnchor: {x: -0.0032033192, y: 0.0015807339, z: -0.03487979}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -13095,7 +13191,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0.05}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0032032903, y: 0.0015807337, z: -0.034879748}
+  m_ConnectedAnchor: {x: -0.0032032903, y: 0.0015807338, z: -0.034879748}
   m_UseSpring: 0
   m_Spring:
     spring: 0

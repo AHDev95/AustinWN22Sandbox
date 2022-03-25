@@ -8,50 +8,31 @@ using TMPro;
 
 public class UIData : MonoBehaviour
 {
-    public int savedint;
-    public float floatTosave;
-    public bool boolTosave;
-    public string stringTosave;
+   public int intToSave;
+    public float floatToSave;
+    public string stringToSave = "";
 
-    public TextMeshProUGUI intText;
+    public Slider intSlider, floatSlider;
+    public TMP_InputField Name;
+
     public TextMeshProUGUI floatText;
+    public TextMeshProUGUI intText;
     public TextMeshProUGUI dataText;
-    
 
-    public Slider floatSlider, intSlider;
-    //public Toggle inputBool;
-
-    public TMP_InputField nameString;
-
-    public void changeSliderValue()
+    public void ChangeSlider()
     {
-        floatTosave = floatSlider.value;
-        //intTosave = Mathf.RoundToInt(intSlider.value);
-       // intText.text = intTosave.ToString();
-        floatText.text = floatTosave.ToString();
-    }
 
-    public void UpdateInfo()
-    {
-        
-    }
 
-    public void DisplayInfo()
-    {
-        //intText.text = intTosave.ToString();
+        intToSave = Mathf.RoundToInt(intSlider.value);
+        intText.text = intToSave.ToString();
+        floatToSave = floatSlider.value;
+        floatText.text = floatToSave.ToString();
     }
 
 
+   
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
 }
