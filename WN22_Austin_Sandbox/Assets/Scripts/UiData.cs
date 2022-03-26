@@ -27,6 +27,8 @@ public class UIData : MonoBehaviour
         intText.text = intToSave.ToString();
         floatToSave = floatSlider.value;
         floatText.text = floatToSave.ToString();
+
+        Debug.Log("slider changed");
     }
 
 
