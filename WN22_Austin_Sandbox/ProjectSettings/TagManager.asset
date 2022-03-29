@@ -6,6 +6,7 @@ TagManager:
   tags:
   - hand
   - chain
+  - fingerTip
   layers:
   - Default
   - TransparentFX
