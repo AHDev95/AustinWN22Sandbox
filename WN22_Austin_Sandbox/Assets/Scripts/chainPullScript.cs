@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class physicsButton : MonoBehaviour
+public class chainPullScript: MonoBehaviour
 {
     [SerializeField]
     private float threshold = 0.1f;
@@ -28,8 +28,8 @@ public class physicsButton : MonoBehaviour
     {
         if (!_isPressed && GetValue() + threshold >= 1) Pressed();
         if (_isPressed && GetValue() - threshold <= 0) Released();
-       // Debug.Log(GetValue());
-       // Debug.Log(transform.localPosition);
+        // Debug.Log(GetValue());
+        //Debug.Log(transform.localPosition);
     }
 
 
@@ -41,7 +41,7 @@ public class physicsButton : MonoBehaviour
             value = 0;
 
         return Mathf.Clamp(value, -1f, 1f);
-        
+
     }
 
     private void Pressed()
